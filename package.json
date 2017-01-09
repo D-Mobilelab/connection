@@ -62,6 +62,9 @@
   },
   "dependencies": {
     "babel-runtime": "^6.20.0",
-    "core-decorators": "^0.15.0"
+    "cordova-test-helper": "https://github.com/D-Mobilelab/cordova-test-helper/tarball/v0.1.2",
+    "core-decorators": "^0.15.0",
+    "docomo-utils": "https://github.com/D-Mobilelab/docomo-utils/tarball/v0.1.0",
+    "event-bus": "https://github.com/D-Mobilelab/event-bus/tarball/v0.1.3"
   }
 }
