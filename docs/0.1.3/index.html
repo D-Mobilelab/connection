@@ -142,10 +142,9 @@ Usage:</p>
     
       
       <pre class='p1 overflow-auto round fill-light'>Connection.initialize();
-Connection.addListener(<span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> <span class="hljs-built_in">console</span>.log(event.networkState, event.type));
-Connection.removeListener(listenerRegisteredBefore);
-Connection.checkConnection().networkState
-Connection.checkConnection().type
+<span class="hljs-keyword">const</span> Listener = <span class="hljs-function">(<span class="hljs-params">{networkState, type}</span>) =&gt;</span> {<span class="hljs-built_in">console</span>.log(networkState, type); }
+Connection.addListener(Listener);
+Connection.removeListener(Listener); 
 Connection.hostReachable(url?); <span class="hljs-comment">//sync call to the current domain</span></pre>
     
   
