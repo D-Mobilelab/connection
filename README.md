@@ -38,10 +38,10 @@ Usage:
 
 ```javascript
 Connection.initialize();
-Connection.addListener((event) => console.log(event.networkState, event.type));
-Connection.removeListener(listenerRegisteredBefore);
-Connection.checkConnection().networkState
-Connection.checkConnection().type
+const Listener = ({networkState, type}) => {console.log(networkState, type); }
+Connection.addListener(Listener);
+Connection.removeListener(Listener); 
+Connection.hostReachable(url?); //sync call to the current domain
 ```
 
 ### initialize
@@ -49,6 +49,16 @@ Connection.checkConnection().type
 bind listeners to online|offline events
 if it runs in cordova context must be called after deviceready
 and cordova-plugin-network should be installed
+
+### checkConnection
+
+checkConnection
+
+Returns **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** connectionStatus
+
+Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** connectionStatus.type online|offline
+
+Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** connectionStatus.networkState 'none', 'wifi', 3G, 4G
 
 ### addListener
 
@@ -68,7 +78,7 @@ UnRegister a function
 
 ### hostReachable
 
-Host reachable make a simple sync HEAD request 
+Host reachable make a simple sync HEAD request
 to location.hostname or custom url
 with a param to disable the cache
 

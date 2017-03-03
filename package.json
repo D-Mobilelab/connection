@@ -15,7 +15,7 @@
     "clean": "rimraf dist build docs",
     "lint": "eslint src",
     "preversion": "npm run test",
-    "version": "npm run build && npm run gen:docs && git add dist docs -f",
+    "version": "npm run build && npm run documentation && git add dist/ docs/ README.md -f",
     "test": "karma start --single-run --no-auto-watch karma.config.js",
     "test:watch": "karma start karma.config.js",
     "documentation": "npm run gen:docs && npm run gen:readme",
@@ -58,13 +58,13 @@
     "karma-webpack": "^1.7.0",
     "loader-utils": "^0.2.12",
     "rimraf": "^2.5.0",
-    "webpack": "^1.12.11"
+    "webpack": "^1.12.11",
+    "cordova-test-helper": "https://github.com/D-Mobilelab/cordova-test-helper/tarball/v0.1.2"
   },
   "dependencies": {
     "babel-runtime": "^6.20.0",
-    "cordova-test-helper": "https://github.com/D-Mobilelab/cordova-test-helper/tarball/v0.1.2",
     "core-decorators": "^0.15.0",
-    "docomo-utils": "https://github.com/D-Mobilelab/docomo-utils/tarball/v0.1.0",
+    "docomo-utils": "https://github.com/D-Mobilelab/docomo-utils/tarball/v0.2.1",
     "event-bus": "https://github.com/D-Mobilelab/event-bus/tarball/v0.1.3"
   }
 }
