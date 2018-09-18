@@ -1,5 +1,7 @@
 # ES6 Boilerplate
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/D-Mobilelab/connection.svg)](https://greenkeeper.io/)
+
 Just change the name of the library in the package.json. That's it. 
 The package name variable will be the entry point for the library in browser case. 
 You can change this behaviour here tools/webpack.config.base.js the library field.
